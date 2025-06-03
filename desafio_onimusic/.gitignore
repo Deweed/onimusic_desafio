@@ -1,0 +1,28 @@
+# .gitignore
+
+# Ignorar o ambiente virtual
+venv/
+*.pyc
+__pycache__/
+
+# Ignorar banco de dados SQLite local
+db.sqlite3
+
+# Ignorar arquivos de mídia e estáticos gerados
+media/
+static/
+
+# Ignorar configurações sensíveis (se você tiver um arquivo .env ou settings_local.py)
+.env
+*.env
+local_settings.py
+
+# Ignorar diretório de teste do VS Code
+.vscode/
+
+# Ignorar arquivos de log
+*.log
+
+# Outros arquivos específicos do OS
+.DS_Store
+Thumbs.db
