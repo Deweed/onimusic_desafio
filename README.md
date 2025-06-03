@@ -73,8 +73,105 @@ Cada filme deve conter as seguintes informações:
 
 ## 🚀 Como rodar seu projeto
 
-Inclua aqui as instruções específicas de como executar seu projeto. Por exemplo:
+### 📋 Requisitos do Sistema
 
-### ▶️ Se for um script Python simples:
-```bash
-python main.py
+- Python 3.9+ (versões mais recentes são recomendadas)
+- pip (gerenciador de pacotes do Python)
+- Git (para clonar o repositório)
+
+---
+
+### 💻 Como Rodar o Projeto
+Siga os passos abaixo para configurar e executar a API e a interface.
+
+#### - Clonar o Repositório
+Clone o repositório para sua máquina local usando Git:
+
+```
+git clone https://github.com/Deweed/onimusic_desafio.git
+cd onimusic_desafio
+```
+
+#### - Configurar o Ambiente Virtual
+É altamente recomendado criar um ambiente virtual para isolar as dependências do projeto.
+
+---
+
+### Criar o ambiente virtual
+```
+python -m venv venv
+```
+
+---
+
+### Ativar o ambiente virtual:
+```
+1.1 No Windows (PowerShell):
+
+.\venv\Scripts\Activate.ps1
+
+1.2 No Windows (Command Prompt/CMD):
+
+.\venv\Scripts\activate
+
+1.3 No macOS/Linux:
+
+# source venv/bin/activate
+```
+
+#### - Instalar Dependências
+Com o ambiente virtual ativado, instale todas as bibliotecas Python necessárias:
+
+```
+pip install django djangorestframework requests
+```
+
+#### - Realizar Migrações do Banco de Dados
+
+Aplique as migrações:
+```
+python manage.py makemigrations filmes
+python manage.py migrate
+```
+
+#### - Iniciar o Servidor de Desenvolvimento do Django
+Abra seu terminal no VS Code e execute o servidor Django:
+
+```
+python manage.py runserver
+```
+O servidor estará rodando em `http://127.0.0.1:8000/`. Você pode acessar `http://127.0.0.1:8000/api/filmes/` 
+no seu navegador para ver a interface de navegação do Django REST Framework.
+
+`Mantenha este terminal aberto e o servidor rodando.`
+
+#### - Rodar a Interface Terminal
+Para interagir com a API usando o script que criamos, você precisará de um segundo terminal.
+
+Abra um novo terminal no VS Code: 
+Clique no sinal de + ao lado da aba atual do terminal ou vá em Terminal > New Terminal.
+Ative o ambiente virtual neste novo terminal também:
+```
+No Windows (PowerShell):
+.\venv\Scripts\Activate.ps1
+
+No Windows (Command Prompt/CMD):
+.\venv\Scripts\activate
+
+No macOS/Linux:
+source venv/bin/activate
+```
+
+Execute o script:
+
+```
+python client_cli.py
+```
+
+Agora você verá um menu interativo no seu segundo terminal.
+
+---
+
+## 🤝 Contribuição
+Sinta-se à vontade para contribuir com este projeto. Crie um fork, faça suas alterações e envie um pull request.
+✨
